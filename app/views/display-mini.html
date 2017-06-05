@@ -1,0 +1,22 @@
+<div class="sp-container-facility">
+  <div class="sire animate-facility" ng-hide="showAppFrame">
+      <div class="facility-title">
+        <div class="facility-title-box">
+          <span class="sp-title-thin">TPC</span><span class="sp-title-thick">OHCIS  MMM</span>
+          <span class="sp-title-version">v1.0</span>
+        </div>
+      </div>
+      <div class="panel panel-danger connection-error" ng-show="connectionError">
+          <sandbox-error></sandbox-error>
+      </div>
+      <form class="form-signin">
+          <!--<h4 class="form-signin-heading text-center" style="font-size-adjust: inherit">Select Facility</h4>-->
+          <select class="form-control" kendo-drop-down-list
+                  k-options="facilitySelectOptions" style="width: 90%; margin-left: 15px; margin-top: 5px"
+                  k-ng-model="facility"
+                  k-value-primitive="true"></select>
+          <button class="btn btn-primary btn-block" ng-click="connect()" ng-show="facilitySelected">Connect</button>
+      </form>
+      <span id="fullscreenBtn"></span>
+  </div>
+</div>

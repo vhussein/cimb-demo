@@ -1,0 +1,24 @@
+<div ng-class="{ 'sp-container-uap' : (showAppFrame != true) }">
+    <div class="animate-uap" ng-hide="showAppFrame">
+        <div class="facility-title">
+            <div class="facility-title-box">
+                <span class="sp-title-thin">TPC</span><span class="sp-title-thick">OHCIS FFF</span>
+                <span class="sp-title-version">v1.0</span>
+            </div>
+        </div>
+    <uap-local id="uapElement" faurl="{{ selectedFacility.serviceUrl + '/login/verify' }}"></uap-local>
+    <div class="uap-reset-pass">
+      <a href="https://202.45.139.162/uap/reset/local.jsp" target="_self">Reset Password</a>
+    </div>
+  </div>
+</div>
+<!--<div ng-hide="showAppFrame" class="sp-screen"></div>-->
+<div class="sp-footer-link">
+  <div class="pull-left">
+    <img src="app/images/mimos-logo.png" border="0" width="20"/>
+  </div>
+  <div class="pull-right">
+    Copyright &copy; 2015 Mimos Berhad. All rights reserved.
+  </div>
+</div>
+<iframe id="mohSandbox" class="appFrame" ng-src="{{selectedFacilityUrl}}" ng-if="showAppFrame" width="100%" height="100%"></iframe>
